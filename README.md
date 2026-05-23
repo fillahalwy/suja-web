@@ -1,4 +1,4 @@
-# Suja Web - Landing Page Profesional dengan Tailwind CSS
+# Suja Web 
 
 **📚 UTS Mata Kuliah: Digital Business**
 
