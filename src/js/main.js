@@ -1,3 +1,19 @@
+// Contact to WhatsApp
+const WHATSAPP_CONFIG = {
+    phone: '6289504456062',
+    message: 'Halo Suja Web, saya tertarik dengan layanan pembuatan website Anda.'
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+  const whatsappLink = `https://wa.me/${WHATSAPP_CONFIG.phone}?text=${encodeURIComponent(WHATSAPP_CONFIG.message)}`;
+  
+  // Update semua link "Get Started" dan "Kirim Pesan"
+  document.querySelectorAll('[data-whatsapp]').forEach(link => {
+    link.href = whatsappLink;
+    link.target = '_blank';
+  });
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
