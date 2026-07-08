@@ -18,11 +18,11 @@ function copyDir(src, dest) {
   if (!fs.existsSync(dest)) {
     fs.mkdirSync(dest, { recursive: true });
   }
-  
+
   fs.readdirSync(src).forEach(file => {
     const srcFile = path.join(src, file);
     const destFile = path.join(dest, file);
-    
+
     if (fs.statSync(srcFile).isDirectory()) {
       copyDir(srcFile, destFile);
     } else {
