@@ -1,12 +1,13 @@
 <!-- 23.11.5794 | 23.11.5781 | 23.11.5763 | 23.11.5766 -->
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VE3ETMM2VC"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-VE3ETMM2VC');
@@ -14,6 +15,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suja Web - Solusi Website Profesional</title>
+    <!-- Favicon Logo -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2225%22 fill=%22%2310b981%22/><path d=%22M30 38 L50 25 L70 38 L70 62 L50 75 L30 62 Z%22 fill=%22none%22 stroke=%22white%22 stroke-width=%228%22 stroke-linejoin=%22round%22/><path d=%22M50 25 L50 75 M30 38 L50 50 L70 38 M30 62 L50 50 L70 62%22 fill=%22none%22 stroke=%22white%22 stroke-width=%225%22 stroke-linejoin=%22round%22/></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -30,47 +34,135 @@
             }
         }
     </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .nav-link.active {
+                @apply text-emerald-500;
+            }
+            .nav-link.active::after {
+                @apply w-full;
+            }
+            @keyframes marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+            .animate-marquee {
+                animation: marquee 30s linear infinite;
+            }
+        }
+    </style>
 </head>
-<body class="font-sans text-gray-900">
+
+<body class="font-sans text-slate-700 bg-white selection:bg-emerald-500 selection:text-white">
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white shadow-md">
+    <nav
+        class="navbar sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100/80 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-5 py-4">
             <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-gray-900">Suja Web</div>
-                
-                <ul class="hidden md:flex gap-8 list-none">
-                    <li><a href="#home" class="nav-link text-gray-900 font-medium hover:text-emerald-500 transition-colors">Home</a></li>
-                    <li><a href="#services" class="nav-link text-gray-900 font-medium hover:text-emerald-500 transition-colors">About</a></li>
-                    <li><a href="#pricing" class="nav-link text-gray-900 font-medium hover:text-emerald-500 transition-colors">Services</a></li>
-                    <li><a href="#contact" class="nav-link text-gray-900 font-medium hover:text-emerald-500 transition-colors">Contact</a></li>
+                <div class="text-2xl font-extrabold tracking-tight text-slate-800 flex items-center gap-2">
+                    <svg class="w-8 h-8 rounded-lg shadow-[0_4px_10px_rgba(16,185,129,0.3)]"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <rect width="100" height="100" rx="25" fill="#10b981" />
+                        <path d="M30 38 L50 25 L70 38 L70 62 L50 75 L30 62 Z" fill="none" stroke="white"
+                            stroke-width="8" stroke-linejoin="round" />
+                        <path d="M50 25 L50 75 M30 38 L50 50 L70 38 M30 62 L50 50 L70 62" fill="none" stroke="white"
+                            stroke-width="5" stroke-linejoin="round" />
+                    </svg>
+                    <a href="index.html">Suja <span class="text-emerald-500">Web</span></a>
+                </div>
+
+                <ul class="nav-menu hidden md:flex gap-8 list-none">
+                    <li><a href="#home"
+                            class="nav-link text-slate-600 font-medium hover:text-emerald-500 transition-all duration-300 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-emerald-500 after:transition-all hover:after:w-full">Home</a>
+                    </li>
+                    <li><a href="#services"
+                            class="nav-link text-slate-600 font-medium hover:text-emerald-500 transition-all duration-300 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-emerald-500 after:transition-all hover:after:w-full">About</a>
+                    </li>
+                    <li><a href="#pricing"
+                            class="nav-link text-slate-600 font-medium hover:text-emerald-500 transition-all duration-300 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-emerald-500 after:transition-all hover:after:w-full">Services</a>
+                    </li>
+                    <li><a href="#faq"
+                            class="nav-link text-slate-600 font-medium hover:text-emerald-500 transition-all duration-300 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-emerald-500 after:transition-all hover:after:w-full">FAQ</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="nav-link text-slate-600 font-medium hover:text-emerald-500 transition-all duration-300 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-emerald-500 after:transition-all hover:after:w-full">Contact</a>
+                    </li>
                 </ul>
 
-                <a href="#pricing" class="hidden md:block px-6 py-3 bg-emerald-500 text-white rounded font-semibold hover:bg-emerald-600 transition-all duration-300 hover:-translate-y-0.5">Get Started</a>
+                <a href="#pricing"
+                    class="hidden md:block px-5 py-2.5 bg-emerald-500 text-white rounded-lg font-semibold hover:bg-emerald-600 hover:-translate-y-0.5 transition-all duration-300 shadow-[0_4px_14px_rgba(16,185,129,0.25)] hover:shadow-[0_6px_20px_rgba(16,185,129,0.35)]">Get
+                    Started</a>
 
-                <div class="hamburger md:hidden flex flex-col gap-1.5 cursor-pointer">
-                    <span class="w-6 h-0.5 bg-gray-900 transition-all"></span>
-                    <span class="w-6 h-0.5 bg-gray-900 transition-all"></span>
-                    <span class="w-6 h-0.5 bg-gray-900 transition-all"></span>
+                <div class="hamburger md:hidden flex flex-col gap-1.5 cursor-pointer p-1">
+                    <span class="w-6 h-0.5 bg-slate-800 transition-all origin-left"></span>
+                    <span class="w-6 h-0.5 bg-slate-800 transition-all"></span>
+                    <span class="w-6 h-0.5 bg-slate-800 transition-all origin-left"></span>
                 </div>
             </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div
+            class="nav-menu-mobile hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-lg border-b border-gray-100 flex-col px-6 py-6 gap-4 shadow-xl md:hidden transition-all duration-300">
+            <a href="#home"
+                class="nav-link py-2 text-slate-750 font-medium border-b border-gray-50 hover:text-emerald-500 transition-colors">Home</a>
+            <a href="#services"
+                class="nav-link py-2 text-slate-750 font-medium border-b border-gray-50 hover:text-emerald-500 transition-colors">About</a>
+            <a href="#pricing"
+                class="nav-link py-2 text-slate-750 font-medium border-b border-gray-50 hover:text-emerald-500 transition-colors">Services</a>
+            <a href="#faq"
+                class="nav-link py-2 text-slate-750 font-medium border-b border-gray-50 hover:text-emerald-500 transition-colors">FAQ</a>
+            <a href="#contact"
+                class="nav-link py-2 text-slate-750 font-medium hover:text-emerald-500 transition-colors">Contact</a>
+            <a href="#pricing"
+                class="mt-2 text-center py-3 bg-emerald-500 text-white rounded-lg font-semibold shadow-md">Get
+                Started</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-light-gray py-24 md:py-32" id="home">
+    <section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-24 md:py-32 overflow-hidden" id="home">
         <div class="max-w-6xl mx-auto px-5">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="hero-content">
-                    <span class="inline-block bg-emerald-100 text-emerald-500 px-4 py-2 rounded-full text-sm font-semibold mb-6">HIGH PERFORMANCE ENGINEERING</span>
-                    <h1 class="text-4xl md:text-5xl font-bold mt-6 mb-6 leading-tight">Belum punya website?, serahkan pada Kami</h1>
-                    <p class="text-lg text-text-light mb-8 leading-relaxed">Suja WEB adalah penyedia jasa pembuatan website untuk berbagai kebutuhan, mulai dari profil perusahaan, portofolio pribadi, hingga halaman promosi produk. Kami membantu klien membangun citra digital yang kuat dengan proses yang simpel dan hasil yang berkualitas.</p>
+
+                    <!-- Headline with Typewriter container -->
+                    <h1
+                        class="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight leading-tight mt-2 mb-6 min-h-[3em] md:min-h-[2.5em]">
+                        <span id="headline-text"
+                            class="border-r-2 border-emerald-500 pr-1 animate-[blink_0.75s_step-end_infinite]"></span>
+                    </h1>
+
+                    <p class="text-base md:text-lg text-slate-500 mb-8 leading-relaxed">Suja WEB adalah penyedia jasa
+                        pembuatan website untuk berbagai kebutuhan, mulai dari profil perusahaan, portofolio pribadi,
+                        hingga halaman promosi produk. Kami membantu kamu membangun citra digital yang kuat dengan
+                        proses yang simpel dan hasil yang berkualitas.</p>
+
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="px-6 py-3 bg-emerald-500 text-white rounded font-semibold hover:bg-emerald-600 transition-all duration-300 hover:-translate-y-0.5 shadow-lg">Mulai Sekarang</button>
-                        <button class="px-6 py-3 bg-transparent text-gray-900 border-2 border-gray-900 rounded font-semibold hover:bg-gray-900 hover:text-white transition-all duration-300">Lihat Portfolio →</button>
+                        <button data-whatsapp
+                            class="px-6 py-3 bg-emerald-500 text-white rounded-lg font-semibold hover:bg-emerald-600 transition-all duration-300 hover:-translate-y-0.5 shadow-[0_8px_25px_rgba(16,185,129,0.25)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.35)]">Mulai
+                            Sekarang</button>
+                        <a href="#pricing"
+                            class="px-6 py-3 bg-transparent text-slate-850 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-300 text-center">Lihat
+                            paket harga →</a>
                     </div>
                 </div>
-                <div class="hero-image hidden md:block">
-                    <img src="assets/images/desktop.jpg" alt="Desk Setup" class="w-full h-auto rounded-2xl shadow-2xl">
+
+                <!-- Hero Image Area -->
+                <div class="hero-image hidden md:block relative">
+                    <!-- Ambient Glow Behind Image -->
+                    <div
+                        class="absolute -top-10 -left-10 w-72 h-72 bg-emerald-100/30 rounded-full blur-[100px] pointer-events-none animate-pulse-subtle">
+                    </div>
+                    <div
+                        class="absolute -bottom-10 -right-10 w-72 h-72 bg-teal-100/30 rounded-full blur-[100px] pointer-events-none animate-pulse-subtle">
+                    </div>
+
+                    <div
+                        class="relative z-10 p-2 bg-white/40 backdrop-blur-md rounded-3xl border border-white/60 shadow-[0_20px_50px_rgba(0,0,0,0.04)]">
+                        <img src="assets/images/desktop.jpg" alt="Desk Setup"
+                            class="w-full h-auto rounded-2xl shadow-md border border-gray-100">
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,36 +171,46 @@
     <!-- Our Expertise Section -->
     <section class="bg-white py-20 md:py-24" id="services">
         <div class="max-w-6xl mx-auto px-5">
-            <span class="text-text-light text-sm font-bold tracking-widest mb-4 inline-block">OUR EXPERTISE</span>
-            <h2 class="text-3xl mb-12 text-gray-900 font-bold">Solusi Digital Terintegrasi</h2>
-            
+            <span class="text-emerald-600 text-xs font-bold tracking-widest uppercase mb-3 inline-block">OUR
+                EXPERTISE</span>
+            <h2 class="text-3xl md:text-4xl text-slate-800 font-bold tracking-tight mb-12">Solusi Digital Terintegrasi
+            </h2>
+
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Web Development Card -->
-                <div class="expertise-card bg-light-gray p-8 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                    <div class="text-5xl text-emerald-500 mb-4">
+                <div
+                    class="expertise-card bg-white p-8 rounded-2xl border border-slate-100 hover:border-emerald-500/10 hover:shadow-[0_20px_40px_rgba(16,185,129,0.05)] hover:-translate-y-2 transition-all duration-500 group">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-50 to-emerald-100/30 flex items-center justify-center text-emerald-500 text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h4 class="text-2xl font-bold mb-4 text-gray-900">Web Development</h4>
-                    <p class="text-text-light text-base leading-relaxed">Membangun website yang responsif dan ramah pengguna dengan teknologi terkini. Dengan mengutamakan kenyamanan pengguna.</p>
+                    <h4 class="text-xl font-bold mb-3 text-slate-800">Web Development</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Membangun website yang responsif dan ramah
+                        pengguna dengan teknologi terkini. Dengan mengutamakan kenyamanan pengguna.</p>
                 </div>
 
                 <!-- SEO Optimization Card -->
-                <div class="expertise-card bg-light-gray p-8 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                    <div class="text-5xl text-emerald-500 mb-4">
+                <div
+                    class="expertise-card bg-white p-8 rounded-2xl border border-slate-100 hover:border-emerald-500/10 hover:shadow-[0_20px_40px_rgba(16,185,129,0.05)] hover:-translate-y-2 transition-all duration-500 group">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-50 to-emerald-100/30 flex items-center justify-center text-emerald-500 text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-search"></i>
                     </div>
-                    <h4 class="text-2xl font-bold mb-4 text-gray-900">SEO Optimization</h4>
-                    <p class="text-text-light text-base leading-relaxed">Strategi optimasi mesin pencari yang memastikan tingginya ranking website Anda di halaman Google.</p>
+                    <h4 class="text-xl font-bold mb-3 text-slate-800">SEO Optimization</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Strategi optimasi mesin pencari yang memastikan
+                        tingginya ranking website Anda di halaman Google.</p>
                 </div>
 
                 <!-- Fast Performance Card -->
-                <div class="expertise-card bg-light-gray p-8 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                    <div class="text-5xl text-emerald-500 mb-4">
+                <div
+                    class="expertise-card bg-white p-8 rounded-2xl border border-slate-100 hover:border-emerald-500/10 hover:shadow-[0_20px_40px_rgba(16,185,129,0.05)] hover:-translate-y-2 transition-all duration-500 group">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-50 to-emerald-100/30 flex items-center justify-center text-emerald-500 text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <h4 class="text-2xl font-bold mb-4 text-gray-900">Fast Performance</h4>
-                    <p class="text-text-light text-base leading-relaxed">Teknologi rendering mutakhir yang memastikan waktu load di bawah 1 detik, memberikan pengalaman pengguna yang luar biasa.</p>
-                    <!-- <span class="inline-block bg-green-100 text-emerald-500 px-4 py-2 rounded text-xs font-bold mt-4">99+ PAGESPEED</span> -->
+                    <h4 class="text-xl font-bold mb-3 text-slate-800">Fast Performance</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Teknologi rendering mutakhir yang memastikan waktu
+                        load di bawah 1 detik, memberikan pengalaman pengguna yang luar biasa.</p>
                 </div>
             </div>
         </div>
@@ -117,67 +219,136 @@
     <!-- Pricing Section -->
     <section class="bg-light-gray py-20 md:py-24" id="pricing">
         <div class="max-w-6xl mx-auto px-5">
-            <h2 class="text-3xl md:text-4xl text-center mb-2 font-bold text-gray-900">Harga Jujur & Transparan</h2>
-            <p class="text-center text-text-light mb-12">Pilih paket yang paling sesuai kebutuhan digital bisnis Anda saat ini.</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
+            <h2 class="text-3xl md:text-4xl text-center mb-3 font-bold text-slate-800 tracking-tight">Harga Jujur &
+                Transparan</h2>
+            <p class="text-center text-slate-500 mb-12 max-w-lg mx-auto">Pilih paket yang paling sesuai kebutuhan
+                digital bisnis Anda saat ini.</p>
+
+            <div class="grid md:grid-cols-3 gap-8 items-stretch">
                 <!-- Basic Plan -->
-                <div class="pricing-card bg-white p-10 rounded-2xl hover:-translate-y-1 transition-all duration-300">
-                    <h3 class="text-sm font-bold text-text-light mb-4">BASIC</h3>
-                    <div class="mb-6">
-                        <span class="font-bold text-gray-900 block">Start From</span>
-                        <span class="font-bold text-gray-900 text-lg line-through">Rp 1.5jt</span>
-                        <span class="text-4xl font-bold text-gray-900 ">Rp 1jt</span>
-                        <span class="text-text-light block mt-3">Company Profile/UMKM/Personal Website/Catalog Toko</span>
+                <div
+                    class="pricing-card bg-white p-8 rounded-2xl border border-slate-100 hover:border-emerald-500/10 hover:shadow-[0_20px_40px_rgba(0,0,0,0.03)] hover:-translate-y-1 transition-all duration-500 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xs font-bold tracking-widest text-slate-400 uppercase mb-4">BASIC</h3>
+                        <div class="mb-8">
+                            <span class="text-3xs font-bold text-slate-400 block uppercase tracking-wider">Start
+                                From</span>
+                            <span class="text-sm font-semibold text-slate-450 line-through">Rp 1.5jt</span>
+                            <div class="flex items-baseline gap-1 mt-1">
+                                <span class="text-4xl font-extrabold tracking-tight text-slate-800">Rp 1jt</span>
+                            </div>
+                            <span class="text-sm text-slate-500 block mt-3 leading-relaxed">Company
+                                Profile/UMKM/Personal Website/Catalog Toko</span>
+                        </div>
+                        <ul class="space-y-3.5 mb-8">
+                            <li class="pb-3.5 border-b border-gray-100 text-sm text-slate-500 flex items-center"><span
+                                    class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center mr-3"><i
+                                        class="fas fa-check text-2xs text-emerald-500"></i></span> 5 Halaman</li>
+                            <li class="pb-3.5 border-b border-gray-100 text-sm text-slate-500 flex items-center"><span
+                                    class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center mr-3"><i
+                                        class="fas fa-check text-2xs text-emerald-500"></i></span> FREE Domain
+                                .com/.my.id/.web.id</li>
+                            <li class="pb-3.5 border-b border-gray-100 text-sm text-slate-500 flex items-center"><span
+                                    class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center mr-3"><i
+                                        class="fas fa-check text-2xs text-emerald-500"></i></span> Basic Responsive</li>
+                            <li class="pb-3.5 border-b border-gray-100 text-sm text-slate-500 flex items-center"><span
+                                    class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center mr-3"><i
+                                        class="fas fa-check text-2xs text-emerald-500"></i></span> Basic SEO Setup</li>
+                            <li class="text-sm text-slate-500 flex items-center"><span
+                                    class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center mr-3"><i
+                                        class="fas fa-check text-2xs text-emerald-500"></i></span> Garansi 1 Tahun</li>
+                        </ul>
                     </div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="pb-4 border-b border-gray-200 text-text-light"><i class="fas fa-check text-emerald-500 mr-3"></i> 5 Halaman</li>
-                        <li class="pb-4 border-b border-gray-200 text-text-light"><i class="fas fa-check text-emerald-500 mr-3"></i> FREE Domain .com/.my.id/.web.id</li>
-                        <li class="pb-4 border-b border-gray-200 text-text-light"><i class="fas fa-check text-emerald-500 mr-3"></i> Basic Responsive</li>
-                        <li class="pb-4 border-b border-gray-200 text-text-light"><i class="fas fa-check text-emerald-500 mr-3"></i> Basic SEO Setup</li>
-                        <li class="text-text-light"><i class="fas fa-check text-emerald-500 mr-3"></i> Garansi 1 Tahun</li>
-                    </ul>
-                    <button data-whatsapp class="w-full px-6 py-3 bg-transparent text-emerald-500 border-2 border-emerald-500 rounded font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300">Pilih Paket</button>
+                    <button data-whatsapp
+                        class="w-full px-6 py-3 bg-transparent text-emerald-500 border border-emerald-500 hover:bg-emerald-500 hover:text-white rounded-lg font-semibold transition-all duration-300">Pilih
+                        Paket</button>
                 </div>
 
                 <!-- Premium Plan (Popular) -->
-                <div class="pricing-card premium bg-white p-10 rounded-2xl border-2 border-emerald-500 relative hover:-translate-y-1 transition-all duration-300">
-                    <span class="absolute -top-4 right-6 bg-emerald-500 text-white px-4 py-2 rounded-full text-xs font-bold">POPULAR</span>
-                    <h3 class="text-sm font-bold text-text-light mb-4">PREMIUM</h3>
-                    <div class="mb-6">
-                        <span class="font-bold text-gray-900 block">Start From</span>
-                        <span class="font-bold text-gray-900 text-lg line-through">Rp 3jt</span>
-                        <span class="text-4xl font-bold text-gray-900">Rp 2jt</span>
-                        <span class="text-text-light block mt-3">Cocok untuk Perusahaan menengah, Lembaga, Instansi, Sekolah, dll.</span>
+                <div
+                    class="pricing-card premium bg-white p-8 rounded-2xl border-2 border-emerald-500 shadow-[0_20px_40px_rgba(16,185,129,0.08)] relative hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between z-10">
+                    <span
+                        class="absolute -top-3 right-6 bg-emerald-500 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider shadow-sm shadow-emerald-500/10">POPULAR</span>
+                    <div>
+                        <h3 class="text-xs font-bold tracking-widest text-emerald-600 uppercase mb-4">PREMIUM</h3>
+                        <div class="mb-8">
+                            <span class="text-3xs font-bold text-emerald-500 block uppercase tracking-wider">Start
+                                From</span>
+                            <span class="text-sm font-semibold text-slate-450 line-through">Rp 3jt</span>
+                            <div class="flex items-baseline gap-1 mt-1">
+                                <span class="text-4xl font-extrabold tracking-tight text-slate-800">Rp 2jt</span>
+                            </div>
+                            <span class="text-sm text-slate-500 block mt-3 leading-relaxed">Cocok untuk Perusahaan
+                                menengah, Lembaga, Instansi, Sekolah, dll.</span>
+                        </div>
+                        <ul class="space-y-3.5 mb-8">
+                            <li class="pb-3.5 border-b border-gray-100 text-sm text-slate-500 flex items-center"><span
+                                    class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center mr-3"><i
+                                        class="fas fa-check text-2xs text-emerald-500"></i></span> 10 Halaman</li>
+                            <li class="pb-3.5 border-b border-gray-100 text-sm text-slate-500 flex items-center"><span
+                                    class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center mr-3"><i
+                                        class="fas fa-check text-2xs text-emerald-500"></i></span> FREE Domain .com/etc
+                            </li>
+                            <li class="pb-3.5 border-b border-gray-100 text-sm text-slate-500 flex items-center"><span
+                                    class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center mr-3"><i
+                                        class="fas fa-check text-2xs text-emerald-500"></i></span> Semi Custom
+                                Responsive</li>
+                            <li class="pb-3.5 border-b border-gray-100 text-sm text-slate-500 flex items-center"><span
+                                    class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center mr-3"><i
+                                        class="fas fa-check text-2xs text-emerald-500"></i></span> Advanced SEO Setup
+                            </li>
+                            <li class="text-sm text-slate-500 flex items-center"><span
+                                    class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center mr-3"><i
+                                        class="fas fa-check text-2xs text-emerald-500"></i></span> Garansi 1 Tahun</li>
+                        </ul>
                     </div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="pb-4 border-b border-gray-200 text-text-light"><i class="fas fa-check text-emerald-500 mr-3"></i> 10 Halaman</li>
-                        <li class="pb-4 border-b border-gray-200 text-text-light"><i class="fas fa-check text-emerald-500 mr-3"></i> FREE Domain .com/etc</li>
-                        <li class="pb-4 border-b border-gray-200 text-text-light"><i class="fas fa-check text-emerald-500 mr-3"></i> Semi Custom Responsive</li>
-                        <li class="pb-4 border-b border-gray-200 text-text-light"><i class="fas fa-check text-emerald-500 mr-3"></i> Advanced SEO Setup</li>
-                        <li class="text-text-light"><i class="fas fa-check text-emerald-500 mr-3"></i> Garansi 1 Tahun</li>
-                    </ul>
-                    <button data-whatsapp class="w-full px-6 py-3 bg-emerald-500 text-white rounded font-semibold hover:bg-emerald-600 transition-all duration-300 hover:-translate-y-0.5">Pilih Paket</button>
+                    <button data-whatsapp
+                        class="w-full px-6 py-3 bg-emerald-500 text-white rounded-lg font-semibold hover:bg-emerald-600 transition-all duration-300">Pilih
+                        Paket</button>
                 </div>
 
                 <!-- Pro Plan -->
-                <div class="pricing-card bg-white p-10 rounded-2xl hover:-translate-y-1 transition-all duration-300">
-                    <span class="absolute -top-4 right-6 bg-emerald-500 text-white px-4 py-2 rounded-full text-xs font-bold">NEGOTIABLE</span>
-                    <h3 class="text-sm font-bold text-text-light mb-4">CUSTOM PRO</h3>
-                    <div class="mb-6">
-                        <span class="font-bold text-gray-900 block">Start From</span>
-                        <span class="font-bold text-gray-900 text-lg line-through">Rp 6jt</span>
-                        <span class="text-4xl font-bold text-gray-900 ">Rp 4jt</span>
-                        <span class="text-text-light block mt-3">Full custom Website, sesuai dengan kebutuhan.</span>
+                <div
+                    class="pricing-card bg-white p-8 rounded-2xl border border-slate-100 hover:border-emerald-500/10 hover:shadow-[0_20px_40px_rgba(0,0,0,0.03)] hover:-translate-y-1 transition-all duration-500 flex flex-col justify-between relative">
+                    <span
+                        class="absolute -top-3 right-6 bg-gray-900 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider">NEGOTIABLE</span>
+                    <div>
+                        <h3 class="text-xs font-bold tracking-widest text-slate-400 uppercase mb-4">CUSTOM PRO</h3>
+                        <div class="mb-8">
+                            <span class="text-3xs font-bold text-slate-400 block uppercase tracking-wider">Start
+                                From</span>
+                            <span class="text-sm font-semibold text-slate-455 line-through">Rp 6jt</span>
+                            <div class="flex items-baseline gap-1 mt-1">
+                                <span class="text-4xl font-extrabold tracking-tight text-slate-800">Rp 4jt</span>
+                            </div>
+                            <span class="text-sm text-slate-500 block mt-3 leading-relaxed">Full custom Website, sesuai
+                                dengan kebutuhan.</span>
+                        </div>
+                        <ul class="space-y-3.5 mb-8">
+                            <li class="pb-3.5 border-b border-gray-100 text-sm text-slate-500 flex items-center"><span
+                                    class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center mr-3"><i
+                                        class="fas fa-check text-2xs text-emerald-500"></i></span> Unlimited Halaman
+                            </li>
+                            <li class="pb-3.5 border-b border-gray-100 text-sm text-slate-500 flex items-center"><span
+                                    class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center mr-3"><i
+                                        class="fas fa-check text-2xs text-emerald-500"></i></span> FREE Domain .com/etc
+                            </li>
+                            <li class="pb-3.5 border-b border-gray-100 text-sm text-slate-500 flex items-center"><span
+                                    class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center mr-3"><i
+                                        class="fas fa-check text-2xs text-emerald-500"></i></span> Full Custom
+                                Responsive</li>
+                            <li class="pb-3.5 border-b border-gray-100 text-sm text-slate-500 flex items-center"><span
+                                    class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center mr-3"><i
+                                        class="fas fa-check text-2xs text-emerald-500"></i></span> Advanced SEO Setup
+                            </li>
+                            <li class="text-sm text-slate-500 flex items-center"><span
+                                    class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center mr-3"><i
+                                        class="fas fa-check text-2xs text-emerald-500"></i></span> Garansi 1 Tahun</li>
+                        </ul>
                     </div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="pb-4 border-b border-gray-200 text-text-light"><i class="fas fa-check text-emerald-500 mr-3"></i> Unlimited Halaman</li>
-                        <li class="pb-4 border-b border-gray-200 text-text-light"><i class="fas fa-check text-emerald-500 mr-3"></i> FREE Domain .com/etc</li>
-                        <li class="pb-4 border-b border-gray-200 text-text-light"><i class="fas fa-check text-emerald-500 mr-3"></i> Full Custom Responsive</li>
-                        <li class="pb-4 border-b border-gray-200 text-text-light"><i class="fas fa-check text-emerald-500 mr-3"></i> Advanced SEO Setup</li>
-                        <li class="text-text-light"><i class="fas fa-check text-emerald-500 mr-3"></i> Garansi 1 Tahun</li>
-                    </ul>
-                    <button data-whatsapp class="w-full px-6 py-3 bg-transparent text-emerald-500 border-2 border-emerald-500 rounded font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300">Pilih Paket</button>
+                    <button data-whatsapp
+                        class="w-full px-6 py-3 bg-transparent text-emerald-500 border border-emerald-500 hover:bg-emerald-500 hover:text-white rounded-lg font-semibold transition-all duration-300">Pilih
+                        Paket</button>
                 </div>
             </div>
         </div>
@@ -186,129 +357,174 @@
     <!-- Testimonials Section -->
     <section class="bg-white py-20 md:py-24" id="testimonials">
         <div class="max-w-6xl mx-auto px-5">
-            <span class="text-text-light text-sm font-bold tracking-widest mb-4 inline-block">TESTIMONIALS</span>
-            <h2 class="text-3xl mb-12 text-gray-900 font-bold">Apa Kata Mereka</h2>
-            
+            <span
+                class="text-emerald-600 text-xs font-bold tracking-widest uppercase mb-3 inline-block">TESTIMONIALS</span>
+            <h2 class="text-3xl md:text-4xl text-slate-800 font-bold tracking-tight mb-12">Apa Kata Mereka</h2>
+
             <div class="relative">
                 <!-- Carousel Container -->
                 <div class="overflow-hidden">
                     <div class="testimonials-carousel flex transition-transform duration-500 ease-out gap-8">
+                        <!-- Slide 1 -->
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full flex-shrink-0">
                             <!-- Testimonial 1 -->
-                            <div class="testimonial-card bg-light-gray p-8 rounded-2xl opacity-0 translate-y-5 transition-all duration-500">
-                                <div class="text-yellow-400 text-lg mb-4">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                            <div
+                                class="testimonial-card bg-slate-50/50 p-8 rounded-2xl border border-slate-100/80 hover:border-emerald-500/10 hover:bg-white hover:shadow-[0_20px_40px_rgba(0,0,0,0.02)] transition-all duration-500 flex flex-col justify-between">
+                                <div>
+                                    <div class="text-yellow-400 text-sm mb-5 flex gap-1">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-slate-500 mb-6 text-sm md:text-base leading-relaxed italic">"Suja Web
+                                        benar-benar mengubah cara kami berkebisnis secara digital. Website kami sekarang
+                                        nampak lebih profesional dan performa bagus di Google sesuai dengan harga yang
+                                        sangat terjangkau."</p>
                                 </div>
-                                <p class="text-text-light mb-6 text-base leading-relaxed">"Suja Web benar-benar mengubah cara kami berkebisnis secara digital. Website kami sekarang nampak lebih profesional dan performa bagus di Google sesuai dengan harga yang sangat terjangkau."</p>
-                                <div class="flex gap-4 items-center">
-                                    <img src="assets/images/ceo.png" alt="Ahmad Setiawan" class="w-12 h-12 rounded-full object-cover">
+                                <div class="flex gap-4 items-center mt-4">
+                                    <img src="assets/images/ceo.png" alt="Bagas Ridho I."
+                                        class="w-12 h-12 rounded-full object-cover border border-emerald-100">
                                     <div>
-                                        <p class="font-semibold text-gray-900">Bagas Ridho I.</p>
-                                        <p class="text-xs text-text-light">CEO, PT SENJA INDONESIA</p>
+                                        <p class="font-bold text-sm text-slate-850">Bagas Ridho I.</p>
+                                        <p class="text-3xs font-bold text-slate-400 uppercase tracking-wider">CEO, PT
+                                            CINTA SEJATI</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Testimonial 2 -->
-                            <div class="testimonial-card bg-light-gray p-8 rounded-2xl opacity-0 translate-y-5 transition-all duration-500">
-                                <div class="text-yellow-400 text-lg mb-4">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                            <div
+                                class="testimonial-card bg-slate-50/50 p-8 rounded-2xl border border-slate-100/80 hover:border-emerald-500/10 hover:bg-white hover:shadow-[0_20px_40px_rgba(0,0,0,0.02)] transition-all duration-500 flex flex-col justify-between">
+                                <div>
+                                    <div class="text-yellow-400 text-sm mb-5 flex gap-1">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-slate-500 mb-6 text-sm md:text-base leading-relaxed italic">
+                                        "Pelayanan yang sangat profesional dengan harga yang menarik akomodasi. Tim kami
+                                        sangat responsif terhadap setiap kebutuhan dan pertanyaan kami. Sangat puas
+                                        dengan pelayanannya"</p>
                                 </div>
-                                <p class="text-text-light mb-6 text-base leading-relaxed">"Pelayanan yang sangat profesional dengan harga yang menarik akomodasi. Tim kami sangat responsif terhadap setiap kebutuhan dan pertanyaan kami. Sangat puas dengan pelayanannya"</p>
-                                <div class="flex gap-4 items-center">
-                                    <img src="assets/images/woman.png" alt="Santi Wijaya" class="w-12 h-12 rounded-full object-cover">
+                                <div class="flex gap-4 items-center mt-4">
+                                    <img src="assets/images/woman.png" alt="Febria"
+                                        class="w-12 h-12 rounded-full object-cover border border-emerald-100">
                                     <div>
-                                        <p class="font-semibold text-gray-900">Febria</p>
-                                        <p class="text-xs text-text-light">FOUNDER, TIM DIGITAL SPEKTRA</p>
+                                        <p class="font-bold text-sm text-slate-850">Febria</p>
+                                        <p class="text-3xs font-bold text-slate-400 uppercase tracking-wider">FOUNDER,
+                                            TIM PUK</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Testimonial 3 -->
-                            <div class="testimonial-card bg-light-gray p-8 rounded-2xl opacity-0 translate-y-5 transition-all duration-500">
-                                <div class="text-yellow-400 text-lg mb-4">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                            <div
+                                class="testimonial-card bg-slate-50/50 p-8 rounded-2xl border border-slate-100/80 hover:border-emerald-500/10 hover:bg-white hover:shadow-[0_20px_40px_rgba(0,0,0,0.02)] transition-all duration-500 flex flex-col justify-between">
+                                <div>
+                                    <div class="text-yellow-400 text-sm mb-5 flex gap-1">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-slate-500 mb-6 text-sm md:text-base leading-relaxed italic">"Performa
+                                        website yang dibuat sangat cepat kec Kasan. Pengalaman pengguna yang lebih mudah
+                                        dan hasil yang maksimal saat kampanye digital kami. Saya sangat puas dengan
+                                        hasilnya."</p>
                                 </div>
-                                <p class="text-text-light mb-6 text-base leading-relaxed">"Performa website yang dibuat sangat cepat kec Kasan. Pengalaman pengguna yang lebih mudah dan hasil yang maksimal saat kampanye digital kami. Saya sangat puas dengan hasilnya."</p>
-                                <div class="flex gap-4 items-center">
-                                    <img src="assets/images/man.png" alt="Rudi Santoso" class="w-12 h-12 rounded-full object-cover">
+                                <div class="flex gap-4 items-center mt-4">
+                                    <img src="assets/images/man.png" alt="Esa"
+                                        class="w-12 h-12 rounded-full object-cover border border-emerald-100">
                                     <div>
-                                        <p class="font-semibold text-gray-900">Esa</p>
-                                        <p class="text-xs text-text-light">DIRECTOR, PT SOLUSI DIGITAL</p>
+                                        <p class="font-bold text-sm text-slate-850">Esa</p>
+                                        <p class="text-3xs font-bold text-slate-400 uppercase tracking-wider">DIRECTOR,
+                                            PT MASUK PAGI SAJA</p>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
                         <!-- Slide 2 -->
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full flex-shrink-0">
-
                             <!-- Testimonial 4 -->
-                            <div class="testimonial-card bg-light-gray p-8 rounded-2xl opacity-0 translate-y-5 transition-all duration-500">
-                                <div class="text-yellow-400 text-lg mb-4">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                            <div
+                                class="testimonial-card bg-slate-50/50 p-8 rounded-2xl border border-slate-100/80 hover:border-emerald-500/10 hover:bg-white hover:shadow-[0_20px_40px_rgba(0,0,0,0.02)] transition-all duration-500 flex flex-col justify-between">
+                                <div>
+                                    <div class="text-yellow-400 text-sm mb-5 flex gap-1">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-slate-500 mb-6 text-sm md:text-base leading-relaxed italic">"Hasil
+                                        yang dicapai sangat memuaskan. Website yang dibuat memberikan pengalaman
+                                        pengguna yang optimal dan membantu meningkatkan visibilitas bisnis kami."</p>
                                 </div>
-                                <p class="text-text-light mb-6 text-base leading-relaxed">"Hasil yang dicapai sangat memuaskan. Website yang dibuat memberikan pengalaman pengguna yang optimal dan membantu meningkatkan visibilitas bisnis kami."</p>
-                                <div class="flex gap-4 items-center">
-                                    <img src="assets/images/man.png" alt="Rudi Santoso" class="w-12 h-12 rounded-full object-cover">
+                                <div class="flex gap-4 items-center mt-4">
+                                    <img src="assets/images/man.png" alt="Ahmad Fillah Alwy"
+                                        class="w-12 h-12 rounded-full object-cover border border-emerald-100">
                                     <div>
-                                        <p class="font-semibold text-gray-900">Ahmad Fillah Alwy</p>
-                                        <p class="text-xs text-text-light">CEO, PT SEMESTA DUNIA AKHIRAT</p>
+                                        <p class="font-bold text-sm text-slate-850">Ahmad Fillah Alwy</p>
+                                        <p class="text-3xs font-bold text-slate-400 uppercase tracking-wider">CEO, PT
+                                            SEMESTA DUNIA AKHIRAT</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Testimonial 5 -->
-                            <div class="testimonial-card bg-light-gray p-8 rounded-2xl opacity-0 translate-y-5 transition-all duration-500">
-                                <div class="text-yellow-400 text-lg mb-4">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                            <div
+                                class="testimonial-card bg-slate-50/50 p-8 rounded-2xl border border-slate-100/80 hover:border-emerald-500/10 hover:bg-white hover:shadow-[0_20px_40px_rgba(0,0,0,0.02)] transition-all duration-500 flex flex-col justify-between">
+                                <div>
+                                    <div class="text-yellow-400 text-sm mb-5 flex gap-1">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-slate-500 mb-6 text-sm md:text-base leading-relaxed italic">"Performa
+                                        website yang dibuat sangat cepat terutama saat memproses perhitungan kepala
+                                        wasit. Membuat saya yang telah gagal 3x akhirnya mencapai tujuan saya. "</p>
                                 </div>
-                                <p class="text-text-light mb-6 text-base leading-relaxed">"Performa website yang dibuat sangat cepat terutama saat memproses perhitungan kepala wasit. Membuat saya yang telah gagal 3x akhirnya mencapai tujuan saya. "</p>
-                                <div class="flex gap-4 items-center">
-                                    <img src="assets/images/man.png" alt="Rudi Santoso" class="w-12 h-12 rounded-full object-cover">
+                                <div class="flex gap-4 items-center mt-4">
+                                    <img src="assets/images/man.png" alt="Pramono Sugianto"
+                                        class="w-12 h-12 rounded-full object-cover border border-emerald-100">
                                     <div>
-                                        <p class="font-semibold text-gray-900">Pramono Sugianto</p>
-                                        <p class="text-xs text-text-light">Ketum Partai YPBS (Yang Penting Bapak Senang)</p>
+                                        <p class="font-bold text-sm text-slate-850">Pramono Sugianto</p>
+                                        <p class="text-3xs font-bold text-slate-400 uppercase tracking-wider">Ketum
+                                            Partai YPBS (Yang Penting Bapak Senang)</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Testimonial 6 -->
-                            <div class="testimonial-card bg-light-gray p-8 rounded-2xl opacity-0 translate-y-5 transition-all duration-500">
-                                <div class="text-yellow-400 text-lg mb-4">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                            <div
+                                class="testimonial-card bg-slate-50/50 p-8 rounded-2xl border border-slate-100/80 hover:border-emerald-500/10 hover:bg-white hover:shadow-[0_20px_40px_rgba(0,0,0,0.02)] transition-all duration-500 flex flex-col justify-between">
+                                <div>
+                                    <div class="text-yellow-400 text-sm mb-5 flex gap-1">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-slate-500 mb-6 text-sm md:text-base leading-relaxed italic">"Sangat
+                                        mantap. Terutama dalam hal responsif dan tampilan yang menarik. Proyek saya
+                                        berjalan dengan lancar, hingga dapat membeli motor listrik dan kaos kaki."</p>
                                 </div>
-                                <p class="text-text-light mb-6 text-base leading-relaxed">"Sangat mantap. Terutama dalam hal responsif dan tampilan yang menarik. Proyek saya berjalan dengan lancar, hingga dapat membeli motor listrik dan kaos kaki."</p>
-                                <div class="flex gap-4 items-center">
-                                    <img src="assets/images/man.png" alt="Rudi Santoso" class="w-12 h-12 rounded-full object-cover">
+                                <div class="flex gap-4 items-center mt-4">
+                                    <img src="assets/images/man.png" alt="Dadan"
+                                        class="w-12 h-12 rounded-full object-cover border border-emerald-100">
                                     <div>
-                                        <p class="font-semibold text-gray-900">Dadan</p>
-                                        <p class="text-xs text-text-light">CEO, MKB (Makan Kenyang Berbayar)</p>
+                                        <p class="font-bold text-sm text-slate-850">Dadan</p>
+                                        <p class="text-3xs font-bold text-slate-400 uppercase tracking-wider">CEO, MKB
+                                            (Makan Kenyang Berbayar)</p>
                                     </div>
                                 </div>
                             </div>
@@ -317,17 +533,222 @@
                 </div>
 
                 <!-- Navigation Arrows -->
-                <button class="carousel-prev absolute -left-4 top-1/2 transform -translate-y-1/2 z-10 bg-emerald-500 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-emerald-600 transition-all hidden md:flex">
-                    <i class="fas fa-chevron-left"></i>
+                <button
+                    class="carousel-prev absolute -left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-gray-100 text-gray-800 rounded-full w-10 h-10 flex items-center justify-center hover:bg-emerald-500 hover:text-white hover:border-emerald-500 shadow-md transition-all hidden md:flex">
+                    <i class="fas fa-chevron-left text-sm"></i>
                 </button>
-                <button class="carousel-next absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 bg-emerald-500 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-emerald-600 transition-all hidden md:flex">
-                    <i class="fas fa-chevron-right"></i>
+                <button
+                    class="carousel-next absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-gray-100 text-gray-800 rounded-full w-10 h-10 flex items-center justify-center hover:bg-emerald-500 hover:text-white hover:border-emerald-500 shadow-md transition-all hidden md:flex">
+                    <i class="fas fa-chevron-right text-sm"></i>
                 </button>
 
                 <!-- Pagination Dots -->
                 <div class="flex justify-center gap-2 mt-8">
-                    <button class="carousel-dot w-2 h-2 rounded-full bg-gray-300 transition-all duration-300 cursor-pointer active:bg-emerald-500" data-index="0"></button>
-                    <button class="carousel-dot w-2 h-2 rounded-full bg-gray-300 transition-all duration-300 cursor-pointer" data-index="1"></button>
+                    <button
+                        class="carousel-dot w-2 h-2 rounded-full bg-emerald-500 transition-all duration-300 cursor-pointer"
+                        data-index="0"></button>
+                    <button
+                        class="carousel-dot w-2 h-2 rounded-full bg-gray-300 transition-all duration-300 cursor-pointer"
+                        data-index="1"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Marquee Section -->
+    <section class="bg-white py-12 border-y border-slate-100/80 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-5">
+            <p
+                class="text-center text-3xs font-extrabold tracking-widest text-slate-400 uppercase mb-8 text-emerald-600">
+                Telah Dipercaya Oleh Berbagai Perusahaan & Instansi</p>
+            <div class="flex w-full overflow-hidden relative">
+                <!-- Left and Right Gradient Mask for Fade Effect -->
+                <div
+                    class="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none">
+                </div>
+                <div
+                    class="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none">
+                </div>
+
+                <div class="flex w-max animate-marquee select-none">
+                    <!-- First Set of Logos -->
+                    <div
+                        class="flex items-center gap-12 md:gap-20 pr-12 md:pr-20 text-slate-400 font-bold text-sm md:text-base tracking-wider whitespace-nowrap">
+                        <div
+                            class="flex items-center gap-2.5 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                            <i class="fas fa-industry text-lg text-emerald-500/75"></i><span>PT SENJA INDONESIA</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2.5 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                            <i class="fas fa-laptop-code text-lg text-emerald-500/75"></i><span>DIGITAL SPEKTRA</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2.5 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                            <i class="fas fa-network-wired text-lg text-emerald-500/75"></i><span>PT SOLUSI
+                                DIGITAL</span></div>
+                        <div
+                            class="flex items-center gap-2.5 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                            <i class="fas fa-hand-holding-heart text-lg text-emerald-500/75"></i><span>YAYASAN
+                                PBS</span></div>
+                        <div
+                            class="flex items-center gap-2.5 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                            <i class="fas fa-utensils text-lg text-emerald-500/75"></i><span>PT MKB INDONESIA</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2.5 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                            <i class="fas fa-globe text-lg text-emerald-500/75"></i><span>PT SEMESTA DUNIA AKHIRAT</span></div>
+                    </div>
+                    <!-- Duplicate Set of Logos for Loop -->
+                    <div
+                        class="flex items-center gap-12 md:gap-20 pr-12 md:pr-20 text-slate-400 font-bold text-sm md:text-base tracking-wider whitespace-nowrap">
+                        <div
+                            class="flex items-center gap-2.5 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                            <i class="fas fa-industry text-lg text-emerald-500/75"></i><span>PT SENJA INDONESIA</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2.5 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                            <i class="fas fa-laptop-code text-lg text-emerald-500/75"></i><span>DIGITAL SPEKTRA</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2.5 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                            <i class="fas fa-network-wired text-lg text-emerald-500/75"></i><span>PT SOLUSI
+                                DIGITAL</span></div>
+                        <div
+                            class="flex items-center gap-2.5 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                            <i class="fas fa-hand-holding-heart text-lg text-emerald-500/75"></i><span>YAYASAN
+                                PBS</span></div>
+                        <div
+                            class="flex items-center gap-2.5 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                            <i class="fas fa-utensils text-lg text-emerald-500/75"></i><span>PT MKB INDONESIA</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2.5 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                            <i class="fas fa-globe text-lg text-emerald-500/75"></i><span>PT SEMESTA DUNIA
+                                AKHIRAT</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-light-gray py-20 md:py-24" id="faq">
+        <div class="max-w-4xl mx-auto px-5">
+            <div class="text-center mb-12">
+                <span class="text-emerald-600 text-xs font-bold tracking-widest uppercase mb-3 inline-block">FAQ</span>
+                <h2 class="text-3xl md:text-4xl text-slate-800 font-bold tracking-tight">Pertanyaan yang Sering Diajukan
+                </h2>
+                <p class="text-slate-500 mt-2">Punya pertanyaan seputar layanan kami? Temukan jawabannya di sini.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div
+                    class="faq-item bg-white rounded-xl border border-slate-100 overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center gap-4 focus:outline-none">
+                        <span class="font-semibold text-slate-800 text-base md:text-lg">Apakah saya perlu paham teknis
+                            untuk mulai?</span>
+                        <span
+                            class="faq-icon w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center text-xs text-slate-500 transition-transform duration-300">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div
+                            class="px-6 pb-5 text-slate-500 text-sm md:text-base leading-relaxed border-t border-gray-50 pt-4">
+                            Sama sekali tidak. Kami akan memandu Kamu dari awal, mulai dari pendaftaran domain, setup
+                            hosting, hingga website siap diakses. Kamutinggal terima beres dan fokus pada bisnis yang
+                            Kamu punya!.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div
+                    class="faq-item bg-white rounded-xl border border-slate-100 overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center gap-4 focus:outline-none">
+                        <span class="font-semibold text-slate-800 text-base md:text-lg">Bagaimana kalau saya ingin
+                            mengubah konten setelah website selesai?</span>
+                        <span
+                            class="faq-icon w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center text-xs text-slate-500 transition-transform duration-300">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div
+                            class="px-6 pb-5 text-slate-500 text-sm md:text-base leading-relaxed border-t border-gray-50 pt-4">
+                            Kami memberikan panduan tertulis atau video singkat tentang cara memperbarui konten secara
+                            mandiri. Selain itu, kami juga memberikan layanan bantuan teknis gratis selama masa garansi
+                            untuk memastikan website Kamu tetap berjalan dengan baik.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div
+                    class="faq-item bg-white rounded-xl border border-slate-100 overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center gap-4 focus:outline-none">
+                        <span class="font-semibold text-slate-800 text-base md:text-lg">Apakah ada biaya tersembunyi
+                            setelah pengerjaan selesai?</span>
+                        <span
+                            class="faq-icon w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center text-xs text-slate-500 transition-transform duration-300">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div
+                            class="px-6 pb-5 text-slate-500 text-sm md:text-base leading-relaxed border-t border-gray-50 pt-4">
+                            Tidak ada. Biaya yang kami cantumkan adalah biaya transparan. Biaya di tahun berikutnya
+                            hanya diperlukan untuk perpanjangan sewa domain dan hosting saja, yang besarnya akan kami
+                            jelaskan secara jujur di awal kerja sama.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div
+                    class="faq-item bg-white rounded-xl border border-slate-100 overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center gap-4 focus:outline-none">
+                        <span class="font-semibold text-slate-800 text-base md:text-lg">Berapa lama proses pembuatan
+                            websitenya?</span>
+                        <span
+                            class="faq-icon w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center text-xs text-slate-500 transition-transform duration-300">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div
+                            class="px-6 pb-5 text-slate-500 text-sm md:text-base leading-relaxed border-t border-gray-50 pt-4">
+                            Proses pembuatan biasanya berkisar antara 7 hingga 14 hari kerja, tergantung pada
+                            komplesitas website.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div
+                    class="faq-item bg-white rounded-xl border border-slate-100 overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center gap-4 focus:outline-none">
+                        <span class="font-semibold text-slate-800 text-base md:text-lg">Apakah saya bisa memesan fitur
+                            kustom yang tidak tertulis di paket?</span>
+                        <span
+                            class="faq-icon w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center text-xs text-slate-500 transition-transform duration-300">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div
+                            class="px-6 pb-5 text-slate-500 text-sm md:text-base leading-relaxed border-t border-gray-50 pt-4">
+                            Tentu saja! Kami sangat senang mendiskusikan kebutuhan khusus bisnis Anda. Silakan hubungi
+                            kami untuk mendiskusikan fitur kustom seperti sistem pemesanan online, integrasi database,
+                            atau landing page dengan desain yang unik.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -339,48 +760,64 @@
             <div class="grid md:grid-cols-2 gap-12 items-start">
                 <!-- Left Side - Contact Info -->
                 <div>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Siap untuk melesat bersama Kami?</h2>
-                    <p class="text-text-light text-lg mb-12 leading-relaxed">Jangan biarkan bisnis Anda tertinggal. Hubungi kami hari ini untuk konsultasi gratis mengenai kebutuhan digital Anda.</p>
-                    
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-slate-800 tracking-tight leading-tight">Siap
+                        untuk melesat bersama Kami?</h2>
+                    <p class="text-slate-500 text-base md:text-lg mb-12 leading-relaxed">Jangan biarkan bisnis Kamu
+                        tertinggal. Hubungi kami hari ini untuk konsultasi gratis mengenai kebutuhan digital Kamu.</p>
+
                     <!-- Email Contact -->
-                    <div class="flex gap-4 mb-8">
-                        <div class="flex items-center justify-center w-12 h-12 bg-emerald-100 rounded-full flex-shrink-0">
+                    <div class="flex gap-5 mb-8">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 bg-emerald-50 rounded-xl flex-shrink-0 shadow-sm border border-emerald-100/50">
                             <i class="fas fa-envelope text-emerald-500"></i>
                         </div>
                         <div>
-                            <p class="text-xs font-bold text-text-light uppercase mb-1">EMAIL US</p>
-                            <p class="text-lg font-bold text-gray-900">hello@sujaweb.id</p>
+                            <p class="text-3xs font-extrabold text-slate-400 uppercase tracking-wider mb-1">EMAIL US</p>
+                            <p class="text-lg font-bold text-slate-800">hello@sujaweb.id</p>
                         </div>
                     </div>
 
                     <!-- Phone Contact -->
-                    <div class="flex gap-4">
-                        <div class="flex items-center justify-center w-12 h-12 bg-emerald-100 rounded-full flex-shrink-0">
+                    <div class="flex gap-5">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 bg-emerald-50 rounded-xl flex-shrink-0 shadow-sm border border-emerald-100/50">
                             <i class="fas fa-phone text-emerald-500"></i>
                         </div>
                         <div>
-                            <p class="text-xs font-bold text-text-light uppercase mb-1">CALL OR WHATSAPP</p>
-                            <a href="https://wa.me/6289504456062" class="text-lg font-bold text-gray-900">+62 895-0445-6062 (Bagas)</a>
+                            <p class="text-3xs font-extrabold text-slate-400 uppercase tracking-wider mb-1">CALL OR
+                                WHATSAPP</p>
+                            <a href="https://wa.me/6289504456062"
+                                class="text-lg font-bold text-slate-800 hover:text-emerald-500 transition-colors">+62
+                                895-0445-6062 (Bagas)</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right Side - Contact Form -->
-                <div class="bg-light-gray p-8 md:p-10 rounded-2xl">
-                    <form class="space-y-4">
+                <div
+                    class="bg-white p-8 md:p-10 rounded-3xl border border-slate-100 shadow-[0_15px_40px_rgba(0,0,0,0.03)]">
+                    <form class="space-y-5">
                         <div>
-                            <label class="block text-xs font-bold text-text-light uppercase mb-2">NAMA LENGKAP</label>
-                            <input type="text" placeholder="Masukkan nama lengkap Anda" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 text-gray-900 placeholder-gray-400">
+                            <label class="block text-3xs font-bold text-slate-400 uppercase tracking-wider mb-2">NAMA
+                                LENGKAP</label>
+                            <input type="text" placeholder="Masukkan nama lengkap Anda"
+                                class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 rounded-xl transition-all duration-200 outline-none text-slate-800 placeholder-gray-400/80 text-sm">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-text-light uppercase mb-2">EMAIL BISNIS</label>
-                            <input type="email" placeholder="Masukkan email bisnis Anda" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 text-gray-900 placeholder-gray-400">
+                            <label class="block text-3xs font-bold text-slate-400 uppercase tracking-wider mb-2">EMAIL
+                                BISNIS</label>
+                            <input type="email" placeholder="Masukkan email bisnis Anda"
+                                class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 rounded-xl transition-all duration-200 outline-none text-slate-800 placeholder-gray-400/80 text-sm">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-text-light uppercase mb-2">PESAN</label>
-                            <textarea placeholder="Ceritakan kebutuhan website Anda..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 resize-none min-h-32 text-gray-900 placeholder-gray-400"></textarea>
+                            <label
+                                class="block text-3xs font-bold text-slate-400 uppercase tracking-wider mb-2">PESAN</label>
+                            <textarea placeholder="Ceritakan kebutuhan website Anda..."
+                                class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 rounded-xl transition-all duration-200 outline-none resize-none min-h-32 text-slate-800 placeholder-gray-400/80 text-sm"></textarea>
                         </div>
-                        <button type="submit" class="w-full px-8 py-4 text-lg bg-emerald-500 text-white rounded-lg font-semibold hover:bg-emerald-600 transition-all duration-300 hover:-translate-y-0.5 mt-6">Kirim Pesan</button>
+                        <button type="submit"
+                            class="w-full px-8 py-4 text-base bg-emerald-500 text-white rounded-xl font-semibold hover:bg-emerald-600 transition-all duration-300 hover:-translate-y-0.5 mt-6 shadow-[0_8px_30px_rgba(16,185,129,0.25)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.35)]">Kirim
+                            Pesan</button>
                     </form>
                 </div>
             </div>
@@ -388,17 +825,26 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark-gray text-white py-12">
+    <footer class="bg-dark-gray text-white py-12 border-t border-gray-800">
         <div class="max-w-6xl mx-auto px-5">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8">
-                <h1 class="text-lg">Suja Web</h1>
-                <p class="text-sm text-gray-400">&copy; 2026 SUJA WEB. ALL RIGHTS RESERVED</p>
-                <div class="flex gap-4 text-sm text-gray-400">
-                    <a href="#privacy" class="hover:text-white transition-colors">PRIVACY POLICY</a>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-4">
+                <div class="flex items-center gap-2">
+                    <svg class="w-6 h-6 rounded shadow-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <rect width="100" height="100" rx="25" fill="#10b981" />
+                        <path d="M30 38 L50 25 L70 38 L70 62 L50 75 L30 62 Z" fill="none" stroke="white"
+                            stroke-width="8" stroke-linejoin="round" />
+                        <path d="M50 25 L50 75 M30 38 L50 50 L70 38 M30 62 L50 50 L70 62" fill="none" stroke="white"
+                            stroke-width="5" stroke-linejoin="round" />
+                    </svg>
+                    <span class="font-extrabold tracking-tight text-white">Suja Web</span>
+                </div>
+                <p class="text-xs text-gray-400">&copy; 2026 SUJA WEB. ALL RIGHTS RESERVED</p>
+                <div class="flex gap-4 text-xs text-gray-400">
+                    <a href="#privacy" class="hover:text-emerald-500 transition-colors">PRIVACY POLICY</a>
                     <span>|</span>
-                    <a href="#terms" class="hover:text-white transition-colors">TERMS OF SERVICE</a>
+                    <a href="#terms" class="hover:text-emerald-500 transition-colors">TERMS OF SERVICE</a>
                     <span>|</span>
-                    <a href="#sitemap" class="hover:text-white transition-colors">SITEMAP</a>
+                    <a href="#sitemap" class="hover:text-emerald-500 transition-colors">SITEMAP</a>
                 </div>
             </div>
         </div>
@@ -406,4 +852,5 @@
 
     <script src="src/js/main.js"></script>
 </body>
+
 </html>
